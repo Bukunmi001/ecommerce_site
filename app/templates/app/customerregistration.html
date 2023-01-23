@@ -1,0 +1,53 @@
+{% extends 'app/base.html' %}
+ {% load static  %}
+ 
+ {% block title %} Customer Registration {% endblock title %}
+
+ 
+ {% block main-content %}
+
+ <div class="container" id="login" style="background:#008080;">
+    <div class="row">
+        <div class="col-md-5 py-3 py-md-0" id="side1">
+            <h3 class="text-center">Register</h3>
+        </div>
+        <div class="col-md-7 py-3 py-md-0" id="side2">
+            <h3 class="text-center">Create Account</h3>
+            <form accept="" method="post">
+                {% csrf_token %}
+                {% for fm in form %}
+                {{fm.label_tag}} {{fm}} <small class="text-danger" > {{fm.error|striptags}} </small>
+                <br>
+                {% endfor %}
+                <input type="submit" value="Submit" class="btn btn-warning"> <br>
+                
+
+                <div class="text-center text-primary fw-bold">
+                    <small> Existing User <a href="{% url 'login'%}" class="text-danger"> Login Now </a></small>
+                </div>
+
+                {% if form.non_field_errors %}
+                {% for error in form.non_field_errors %}
+                    <p class="alert alert-danger my-3"> {{error}}
+                {% endfor %}
+            {% endif %}
+
+            {% if messages %}
+            {% for msg in messages %}
+                        <div class="alert alert-{{msg.tags}}" role="alert">
+                            {{msg}}
+                        </div>
+            {% endfor %}
+        {% endif %}
+            
+            
+            </form>
+        </div>
+    
+
+    </div>
+   </div>
+    
+ {% endblock main-content %}
+    
+    

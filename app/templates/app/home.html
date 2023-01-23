@@ -1,0 +1,210 @@
+{% extends 'app/base.html' %}
+
+{% load static %}
+
+{% block title %} Home {% endblock title %}   
+
+
+{% block banner-slider %}  
+    <!--    banner -->
+    <section class="banner">
+        <div class="content" style="color:#008080">
+          <h1 style="color:#008080"> <span style="color:#008080" >Electronic Gadget</span>
+            <br>
+            Up To <span id="span2">50%</span> Off
+          </h1>
+          <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Dicta, saepe.
+            <br>Lorem ipsum dolor sit amet consectetur.
+          </p>
+          <div class="btn" ><button style="color:#fff; background-color: darkorange;">Shop Now</button></div>
+    
+        </div>
+        <div class="img">
+          <img src="{% static 'app/images/image2.png' %}" alt="">
+        </div>
+      </section>
+      <!-- banner -->
+
+
+{% endblock banner-slider %}
+
+{% block information %} 
+ <!-- product cards -->
+ <div class="container" id="product-cards">
+  <h1 class="text-center">PRODUCTS</h1>
+  <div class="row" style="margin-top: 30px;">
+    <div class="col-md-3 py-3 py-md-0" >
+      <a href="{% url 'category' 'SP' %}" style="text-decoration: none ;">
+      <div class="card">
+        <img src="{% static 'app/images/p6.png' %}" alt="">
+        <div class="card-body">
+          <h3 class="text-center">Iphone 13 pro</h3>
+          <p class="text-center">Lorem ipsum dolor sit amet.</p>
+          <div class="star text-center">
+            <i class="fa-solid fa-star checked"></i>
+            <i class="fa-solid fa-star checked"></i>
+            <i class="fa-solid fa-star checked"></i>
+            <i class="fa-solid fa-star checked"></i>
+            <i class="fa-solid fa-star checked"></i>
+          </div>
+          <h2>$1000 <span><li class="fa-solid fa-cart-shopping"></li></span></h2>
+        </div>
+      </div>
+      </a>
+    </div>
+    <div class="col-md-3 py-3 py-md-0">
+      <a href="{% url 'category' 'HP' %}" style="text-decoration: none ;">
+      <div class="card">
+        <img src="{% static 'app/images/a1.png' %}" alt="">
+        <div class="card-body">
+          <h3 class="text-center">Airpods</h3>
+          <p class="text-center">Lorem ipsum dolor sit amet.</p>
+          <div class="star text-center">
+            <i class="fa-solid fa-star checked"></i>
+            <i class="fa-solid fa-star checked"></i>
+            <i class="fa-solid fa-star checked"></i>
+            <i class="fa-solid fa-star checked"></i>
+            <i class="fa-solid fa-star checked"></i>
+          </div>
+          <h2>$100 <span><li class="fa-solid fa-cart-shopping"></li></span></h2>
+        </div>
+      </div>
+      </a>
+    </div>
+    <div class="col-md-3 py-3 py-md-0">
+      <a href="{% url 'category' 'LP' %}" style="text-decoration: none ;">
+      <div class="card">
+        <img src="{% static 'app/images/laptop2.png' %} " alt="">
+        <div class="card-body">
+          <h3 class="text-center">Laptop</h3>
+          <p class="text-center">Lorem ipsum dolor sit amet.</p>
+          <div class="star text-center">
+            <i class="fa-solid fa-star checked"></i>
+            <i class="fa-solid fa-star checked"></i>
+            <i class="fa-solid fa-star checked"></i>
+            <i class="fa-solid fa-star checked"></i>
+            <i class="fa-solid fa-star checked"></i>
+          </div>
+          <h2>$200 <span><li class="fa-solid fa-cart-shopping"></li></span></h2>
+        </div>
+      </div>
+      </a>
+    </div>
+    <div class="col-md-3 py-3 py-md-0">
+      <a href="{% url 'category' 'SP' %}" style="text-decoration: none ;">
+      <div class="card">
+        <img src="{% static 'app/images/t1.png' %} " alt="">
+        <div class="card-body">
+          <h3 class="text-center">Ipad</h3>
+          <p class="text-center">Lorem ipsum dolor sit amet.</p>
+          <div class="star text-center">
+            <i class="fa-solid fa-star checked"></i>
+            <i class="fa-solid fa-star checked"></i>
+            <i class="fa-solid fa-star checked"></i>
+            <i class="fa-solid fa-star checked"></i>
+            <i class="fa-solid fa-star checked"></i>
+          </div>
+          <h2>$300 <span><li class="fa-solid fa-cart-shopping"></li></span></h2>
+        </div>
+      </div>
+      </a>
+    </div>
+    
+  </div>
+
+  <div class="row" style="margin-top: 30px;">
+    <div class="col-md-3 py-3 py-md-0">
+      <a href="{% url 'category' 'SM' %}" style="text-decoration: none ;">
+      <div class="card">
+        <img src="{% static 'app/images/w1.png' %}" alt="">
+        <div class="card-body">
+          <h3 class="text-center">Smart Watch</h3>
+          <p class="text-center">Lorem ipsum dolor sit amet.</p>
+          <div class="star text-center">
+            <i class="fa-solid fa-star checked"></i>
+            <i class="fa-solid fa-star checked"></i>
+            <i class="fa-solid fa-star checked"></i>
+            <i class="fa-solid fa-star checked"></i>
+            <i class="fa-solid fa-star checked"></i>
+          </div>
+          <h2>$50.60 <span><li class="fa-solid fa-cart-shopping"></li></span></h2>
+        </div>
+      </div>
+      </a>
+    </div>
+    <div class="col-md-3 py-3 py-md-0">
+      <a href="{% url 'category' 'PM' %}" style="text-decoration: none ;">
+      <div class="card">
+        <img src="{% static 'app/images/pcm1.png' %}" alt="">
+        <div class="card-body">
+          <h3 class="text-center">PC Moniter</h3>
+          <p class="text-center">Lorem ipsum dolor sit amet.</p>
+          <div class="star text-center">
+            <i class="fa-solid fa-star checked"></i>
+            <i class="fa-solid fa-star checked"></i>
+            <i class="fa-solid fa-star checked"></i>
+            <i class="fa-solid fa-star checked"></i>
+            <i class="fa-solid fa-star checked"></i>
+          </div>
+          <h2>$600 <span><li class="fa-solid fa-cart-shopping"></li></span></h2>
+        </div>
+      </div>
+      </a>
+    </div>
+    <div class="col-md-3 py-3 py-md-0">
+      <a href="{% url 'category' 'SP' %}" style="text-decoration: none ;">
+      <div class="card">
+        <img src="{% static 'app/images/phone1.png' %}" alt="">
+        <div class="card-body">
+          <h3 class="text-center">iPhone x</h3>
+          <p class="text-center">Lorem ipsum dolor sit amet.</p>
+          <div class="star text-center">
+            <i class="fa-solid fa-star checked"></i>
+            <i class="fa-solid fa-star checked"></i>
+            <i class="fa-solid fa-star checked"></i>
+            <i class="fa-solid fa-star checked"></i>
+            <i class="fa-solid fa-star checked"></i>
+          </div>
+          <h2>$500 <span><li class="fa-solid fa-cart-shopping"></li></span></h2>
+        </div>
+      </div>
+      </a>
+    </div>
+    <div class="col-md-3 py-3 py-md-0">
+      <a href="{% url 'category' 'SP' %}" style="text-decoration: none ;">
+      <div class="card">
+        <img src="{% static 'app/images/h1.png' %}" alt="">
+        <div class="card-body">
+          <h3 class="text-center">Headphone</h3>
+          <p class="text-center">Lorem ipsum dolor sit amet.</p>
+          <div class="star text-center">
+            <i class="fa-solid fa-star checked"></i>
+            <i class="fa-solid fa-star checked"></i>
+            <i class="fa-solid fa-star checked"></i>
+            <i class="fa-solid fa-star checked"></i>
+            <i class="fa-solid fa-star checked"></i>
+          </div>
+          <h2>$60 <span><li class="fa-solid fa-cart-shopping"></li></span></h2>
+        </div>
+      </div>
+      </a>
+    </div>
+  </div>
+</div>
+<!-- product cards -->
+
+
+
+
+    <!-- newslater -->
+    <div class="container" id="newslater">
+      <h3 class="text-center">Subscribe To The Electronic Shop For Latest upload.</h3>
+      <div class="input text-center">
+        <input type="text" placeholder="Enter Your Email..">
+        <button id="subscribe">SUBSCRIBE</button>
+      </div>
+    </div>
+    <!-- newslater -->
+
+
+{% endblock information %} 
